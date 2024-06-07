@@ -32,22 +32,19 @@ public class Affirmation {
 
         if (contenu.contains(" et ")) {
             String[] elements = contenu.split(" et ");
-            if (verifierAffirmation(elements[0]) != null && 
-                verifierAffirmation(elements[1]) != null && 
+            if ((verifierAffirmation(elements[0]) != null || verifierAffirmation(elements[1]) != null) &&
                 (verifierAffirmation(elements[0]).equals("vrai") && verifierAffirmation(elements[1]).equals("vrai"))) return "vrai";
             return "faux";
         }
 
         if (contenu.contains(" ou ")) {
             String[] elements = contenu.split(" ou ");
-            if (verifierAffirmation(elements[0]) != null &&
-                verifierAffirmation(elements[1]) != null &&
+            if ((verifierAffirmation(elements[0]) != null || verifierAffirmation(elements[1]) != null) &&
                 (verifierAffirmation(elements[0]).equals("vrai") || verifierAffirmation(elements[1]).equals("vrai"))) return "vrai";
             return "faux";
         }
 
-        if (verifierAffirmation(contenu) != null && verifierAffirmation(contenu).equals("vrai")) return "vrai";
-        if (verifierAffirmation(contenu) != null && verifierAffirmation(contenu).equals("faux")) return "faux";
+        if (verifierAffirmation(contenu) != null) return verifierAffirmation(contenu);
         return "jenesaispas";
     }
 
