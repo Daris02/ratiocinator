@@ -53,12 +53,12 @@ public class Affirmation {
 
     private String verifierAffirmation(String affirmation) {
         affirmation = affirmation.replace(".", "");
-        if (recuperRationDesAffirmation().containsKey(affirmation))
-            return recuperRationDesAffirmation().get(affirmation);
+        if (recuperationDesAffirmation().containsKey(affirmation))
+            return recuperationDesAffirmation().get(affirmation);
         return null;
     }
 
-    private static Map<String, String> recuperRationDesAffirmation() {
+    private static Map<String, String> recuperationDesAffirmation() {
         try(BufferedReader lecteur = new BufferedReader(new FileReader("Affirmations.txt"));) {
             Map<String, String> donnees = new LinkedHashMap<>();
             String ligne;
