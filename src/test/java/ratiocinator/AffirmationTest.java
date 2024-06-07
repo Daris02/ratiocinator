@@ -34,4 +34,16 @@ public class AffirmationTest {
         assertEquals("jenesaispas", affirmation_3.calucle());
         assertEquals("faux", affirmation_4.calucle());
     }
+
+    @Test
+    void affirmation_different() {
+        var affirmation = new Affirmation("Le ciel est bleu.");
+        assertEquals("vrai", affirmation.calucle());
+    }
+
+    @Test
+    void affirmation_inconnue() {
+        var affirmation = new Affirmation("Mon code marche");
+        assertEquals("jenesaispas", affirmation.calucle());
+    }
 }

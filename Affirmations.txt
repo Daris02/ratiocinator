@@ -1,3 +1,4 @@
-Lou est beau.=vrai
-Lou est pauvre.=faux
-Lou est généreux.=jenesaispas
+Lou est beau=vrai
+Lou est pauvre=faux
+Lou est généreux=jenesaispas
+Le ciel est bleu=vrai
