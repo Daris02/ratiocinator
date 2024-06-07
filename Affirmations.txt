@@ -1,0 +1,3 @@
+Lou est beau.=vrai
+Lou est pauvre.=faux
+Lou est généreux.=jenesaispas
