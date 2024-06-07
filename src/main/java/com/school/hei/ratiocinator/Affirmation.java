@@ -44,15 +44,14 @@ public class Affirmation {
             return "faux";
         }
 
-        if (verifierAffirmation(contenu) != null) return verifierAffirmation(contenu);
-        return "jenesaispas";
+        return verifierAffirmation(contenu) ;
     }
 
     private String verifierAffirmation(String affirmation) {
         affirmation = affirmation.replace(".", "");
         if (recuperationDesAffirmation().containsKey(affirmation))
             return recuperationDesAffirmation().get(affirmation);
-        return null;
+        return "jenesaispas";
     }
 
     private static Map<String, String> recuperationDesAffirmation() {
