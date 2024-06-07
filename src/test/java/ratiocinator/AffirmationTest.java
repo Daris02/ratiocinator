@@ -11,7 +11,6 @@ public class AffirmationTest {
     @Test
     void affirmation_vrai() {
         var veriter_1 = new Affirmation("Lou est beau.");
-        System.out.println(veriter_1.calucle());
         assertEquals("vrai", veriter_1.calucle());
 
     }
